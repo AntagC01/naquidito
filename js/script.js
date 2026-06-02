@@ -550,15 +550,47 @@ function carregarPergunta() {
 
     resposta.style.display = "none";
 }
+function lerTexto(texto) {
+    speechSynthesis.cancel();
+
+    const fala = new SpeechSynthesisUtterance(texto);
+
+    const vozes = speechSynthesis.getVoices();
+
+    fala.voice = vozes.find(v =>
+        v.lang === "pt-BR"
+    );
+
+    fala.rate = 0.95;
+    fala.pitch = 1;
+
+    speechSynthesis.speak(fala);
+}
+function lerPergunta() {
+    lerTexto(textoPergunta.textContent);
+}
+
+const audio = new Audio("audio/quack.mp3");
 
 // Primeira pergunta
 carregarPergunta();
+//lerPergunta();
 
 document.getElementById("btnMostrar").addEventListener("click", () => {
-    resposta.style.display =
-        resposta.style.display === "block" ? "none" : "block";
-});
 
+
+    audio.currentTime = 0;
+    //audio.play();
+
+    const exibindo = resposta.style.display === "block";
+
+    resposta.style.display = exibindo ? "none" : "block";
+
+    // Só lê quando estiver mostrando
+    if (!exibindo) {
+        //lerTexto(textoResposta.textContent);
+    }
+});
 document.getElementById("btnTrocar").addEventListener("click", () => {
 
     indiceAtual++;
@@ -570,4 +602,6 @@ document.getElementById("btnTrocar").addEventListener("click", () => {
     }
 
     carregarPergunta();
+    //lerPergunta();
 });
+
