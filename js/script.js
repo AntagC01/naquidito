@@ -60,14 +60,6 @@ const perguntasRespostas = [
         resposta: "32"
     },
     {
-        pergunta: "Quantos minutos tem um dia?",
-        resposta: "1440"
-    },
-    {
-        pergunta: "Quantos segundos tem uma hora?",
-        resposta: "3600"
-    },
-    {
         pergunta: "Qual a população aproximada do Brasil?",
         resposta: "203.000.000"
     },
