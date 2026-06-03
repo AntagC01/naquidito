@@ -550,6 +550,7 @@ function carregarPergunta() {
 
     resposta.style.display = "none";
 }
+
 function lerTexto(texto) {
     speechSynthesis.cancel();
 
@@ -566,6 +567,7 @@ function lerTexto(texto) {
 
     speechSynthesis.speak(fala);
 }
+
 function lerPergunta() {
     lerTexto(textoPergunta.textContent);
 }

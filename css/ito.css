@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 450px;
+    box-shadow: 0 0 15px rgba(0,0,0,.15);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#contador {
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+#numero {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #2c7be5;
+}
+
+.oculto {
+    color: #ccc !important;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #2c7be5;
+    color: white;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.botoes {
+    margin: 15px 0;
+}
+
+#todosNumeros {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.8;
+}
