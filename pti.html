@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+
+    <link rel="stylesheet" href="css/pti.css">
+</head>
+
+<body>
+
+    <!-- Recursos -->
+    <div id="recursos">
+        <h3>Recursos</h3>
+        <div id="lista-recursos"></div>
+    </div>
+
+    <!-- Área principal -->
+    <div id="jogo">
+
+        <div class="acao">
+            <button onclick="produzirMadeira()">Cortar Madeira</button>
+            <span id="madeiraValor">0</span>
+        </div>
+
+        <div class="acao">
+            <button onclick="produzirPedra()">Minerar Pedra</button>
+            <span id="pedraValor">0</span>
+        </div>
+
+        <div class="acao">
+            <button onclick="produzirFerro()">Minerar Ferro</button>
+            <span id="ferroValor">0</span>
+        </div>
+
+        <button class="upgrade" onclick="abrirUpgrades()">
+            Ir para Upgrades →
+        </button>
+
+    </div>
+
+    <script src="js/pti.js"></script>
+
+</body>
+
+</html>
